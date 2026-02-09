@@ -1,0 +1,18 @@
+Summary Report Objective:
+Migrate data from MySQL to PostgreSQL 
+(while preserving schema, constraints, and data integrity)
+Process:
+1.Export MySQL schema and data using mysqldump.
+2. Transform SQL dump to align with PostgreSQL syntax and data types.
+3. Import into PostgreSQL using psql.
+4. Validate by comparing row counts, checksums, and running integrity queries.
+
+Challenges & Resolutions
+1. Data type mismatches: Resolved by mapping MySQL types to PostgreSQL equivalents.
+2. Auto-increment fields: Converted to SERIAL in PostgreSQL.
+3. Character encoding: Ensured UTF-8 compatibility during export/import.
+
+Outcome
+1. Migration completed successfully.
+2. All tables and records verified with consistent counts.
+3. Referential integrity maintained across foreign keys.
